@@ -21,6 +21,12 @@ public class CadastroPesquisaQaTest extends BaseTeste {
 	}
 	
 	@Test
+	public void acessarCadastro(){
+		page.acessarCadastroPesquisaQA();
+	}
+	
+	
+	@Test
 	public void cadastroSucessoPesquisaQa(){
 		page.acessarCadastroPesquisaQA();
 		page.setNomeCadastro("Thiago");
@@ -35,7 +41,5 @@ public class CadastroPesquisaQaTest extends BaseTeste {
 		page.setLinguagemProgramacaoInteresseCadastro("Java, JavaScript, Ruby");
 		page.setEnviarFinalizacaoCadastro();
 	}
-	
-	
 	
 }
