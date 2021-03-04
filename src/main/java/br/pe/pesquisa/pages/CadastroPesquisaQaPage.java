@@ -1,13 +1,10 @@
-package br.pe.pesquisa.page;
+package br.pe.pesquisa.pages;
+
+import org.openqa.selenium.By;
 
 import br.pe.pesquisa.core.BasePage;
 
 public class CadastroPesquisaQaPage extends BasePage{
-
-	
-	public void acessarCadastroPesquisaQA(){
-		dsl.clicarBotao("menu-item-226");
-	}
 	
 	public void setNomeCadastro(String nome){
 		dsl.escrever("nf-field-5", nome);
@@ -73,5 +70,9 @@ public class CadastroPesquisaQaPage extends BasePage{
 	public void setEnviarFinalizacaoCadastro(){
 		dsl.clicarBotao("nf-field-16");
 	}
-
+	
+	public String obterTituloPaginaPesquisaQa(){
+		return dsl.obterTexto(By.xpath("//h1[@class='entry-title']"));
+		
+	}
 }
